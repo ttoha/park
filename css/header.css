@@ -1,0 +1,93 @@
+header {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    max-width:1745px;
+    padding: 0 10px;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 3px 7px rgba(18,20,23,.15);
+    position: relative;
+    z-index: 1
+}
+.mobile-menu-btn {
+    display: none
+}
+.mobile-menu a {
+    text-transform: uppercase
+}
+.logo {
+    height: 100%
+}
+.logo a {
+    display: table;
+    margin-bottom: -40px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 3px 7px rgba(18,20,23,.25);
+}
+.logo a img {
+    float: left;
+    max-width: 100%
+}
+.main-menu {
+    flex-grow: 1
+}
+.main-menu ul {
+    width: 100%;
+    margin: 0; padding: 0 0 0 50px;
+    list-style: none;
+    position:relative;
+    bottom: -2px
+}
+.main-menu ul li {
+    display: inline-block;
+    padding:0 5px;
+}
+.main-menu ul li a {
+    display: block;
+    color: #585858;
+    font-size: 14px;
+    font-weight: bold;
+    padding:0 2px 5px;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+}
+.main-menu ul li a:hover,
+.main-menu ul li.active a {
+    border-color: #b2d78d
+}
+.header-phone {
+    width: 225px;
+    margin-right: 15px;
+    position: relative;
+    font-weight: bold
+}
+.header-phone .collapse,
+.header-phone .collapsing {
+    position: absolute;
+    z-index: -1;
+    left:-15px; top:49px;
+    width:240px;
+    background-color:#fff;
+    padding:20px 0 20px 30px;
+    color: #585858;
+    font-size: 17px;
+    font-weight: bold;
+    box-shadow: 0 3px 7px rgba(18,20,23,.15) inset;
+}
+.header-phone .collapsing {
+    padding:10px 0 0 30px
+}
+.header-phone a {
+    color: #414141;
+    font-size: 17px;
+    white-space: nowrap
+}
+.header-phone a .sprite {
+    position: relative;
+    top:-1px
+}
+.callback {
+    min-width:182px
+}

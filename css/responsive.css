@@ -1,0 +1,298 @@
+@media (max-width: 1200px) {
+    .article .article-extra .bt {
+        right: 0
+    }
+    .article:nth-of-type(even) .article-extra .bt {
+        right: auto; left: 0;
+    }
+}
+@media (max-width: 1024px) {
+    body {
+        font-size: 16px
+    }
+    header {
+        justify-content:flex-start
+    }
+    .pad60 {
+        padding-top: 30px!important;
+    }
+    h2.h2 {
+        margin-bottom: 20px
+    }
+    h3.h3 {
+        font-size: 20px
+    }
+    .page-title {
+        margin-bottom: 30px
+    }
+    .mobile-menu-btn {
+        display: block
+    }
+    .main-single {
+        padding: 0 15px 30px;
+        background: none
+    }
+    .main-single h3 {
+        padding-top: 0
+    }
+    .main-single-desc {
+        padding-top: 15px;
+    }
+    .slick-arrow {
+        width: 40px;
+    }
+    .mobile-menu-btn {
+        position: absolute;
+        right: 10px; top:5px
+    }
+    .logo {
+        margin-right: 15px;
+    }
+    .callback {
+        min-width:inherit;
+    }
+    .callback .bt {
+        font-size: 11px;
+        padding: 0 10px;
+        text-align: center;
+        line-height: inherit
+    }
+    .avantazh-left {
+        padding-right: 0
+    }
+    .avantazh-left-title {
+        font-size: 25px
+    }
+    .avantazh-left-desc {
+        line-height: 18px
+    }
+    .mejs-inner .mejs-overlay-button {
+        width: 50px; height: 50px;
+    }
+    .main-contacts-bg {
+        background: #ff864d
+    }
+    .main-contacts {
+        width: 100%
+    }
+    .main-contacts-bg {
+        height: auto
+    }
+    .main-contacts {
+        padding: 15px;
+    }
+    .main-contacts .main-contacts-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .main-contacts p {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .main-buy {
+        padding: 15px;
+        display: block
+    }
+    .main-buy-title {
+        height: auto;
+        max-width: inherit;
+        margin-bottom: 15px;
+        padding: 5px
+    }
+    .main-buy-title strong {
+        font-size: 50px;
+    }
+    .main-buy-title span {
+        font-size: 35px;
+    }
+    .main-buy-desc {
+        width: 100%;
+        height: auto
+    }
+    .main-buy-desc-img img {
+        width: 100%
+    }
+    .main-buy-desc .bt {
+        right: 15px
+    }
+    .avantazh {
+        flex-direction: column
+    }
+    .avantazh-left,
+    .avantazh-right {
+        width: 100%
+    }
+    .avantazh-left {
+        order: 2;
+        background-position: 15px center
+    }
+    .avantazh-left-content {
+        width: 100%;
+        padding: 15px
+    }
+    .avantazh-left-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .avantazh-left-desc {
+        font-size: 14px;
+    }
+    footer {
+        display: block;
+        padding: 15px;
+    }
+    footer .footer-logo {
+        text-align: center;
+        margin-bottom: 10px
+    }
+    footer .footer-menu {
+        min-width: inherit;
+        padding-bottom: 5px
+    }
+    footer .footer-menu li {
+        display: block;
+        margin-bottom: 5px
+    }
+    .footer-bt {
+        width: auto;
+        min-width: inherit;
+        display: table;
+        margin: 0 auto 10px;
+    }
+    footer .site-info {
+        margin: 0 auto;
+        width: 200px;
+
+    }
+    footer .site-info li {
+        display: flex;
+        margin-bottom: 5px;
+        text-align: left
+    }
+
+    .article {
+
+    }
+    .article-img {
+        min-width: 300px
+    }
+    .article-content {
+        padding: 20px
+    }
+    .article:last-of-type {
+        margin-bottom: 60px
+    }
+
+    .cottage-top {
+        display: block
+    }
+    .cottage {
+        padding-top: 90px;
+    }
+    .cottage-top .price {
+        border-radius: 0
+    }
+    .small-slider .slick-arrow.slick-prev {
+        left: 10px;
+        opacity: .8;
+        border-radius: 0
+    }
+    .small-slider .slick-arrow.slick-next {
+        right: 9px;
+        opacity: .8;
+        border-radius: 0
+    }
+    .all-cottage-item .extra {
+        display: block
+    }
+    .contacts {
+        flex-direction: column;
+        min-height: inherit
+    }
+}
+@media (min-width: 768px) AND (max-width: 1024px) {
+
+}
+@media (max-width: 767px) {
+    header {
+        height: auto;
+        align-items:flex-end;
+        padding-bottom: 10px;
+    }
+    .logo a {
+        margin-bottom: 0
+    }
+    .main-bg-article .number {
+        display: none
+    }
+    .main-bg-article--one,
+    .main-bg-article--two {
+        padding:15px;
+        min-height: inherit
+    }
+    .mejs-inner .mejs-overlay-button {
+        width: 35px; height: 35px;
+    }
+    .main-buy-desc .bt {
+        position: static;
+        margin: 15px auto 0;
+        height: 40px;
+        line-height: 40px;
+    }
+    .article {
+        flex-wrap: wrap
+    }
+    .article-img {
+        min-width: 100%
+    }
+    .article-content {
+        min-width: 100%;
+        padding: 15px
+    }
+    .article:nth-of-type(even) .article-img {
+        order: 0
+    }
+    .article:nth-of-type(even) .article-extra .article-download {
+        order: 0
+    }
+    .page-title {
+        padding: 0 15px
+    }
+    .article-extra .bt {
+        text-align: center;
+        line-height: 15px;
+        padding: 0 19px;
+    }
+    .services {
+        padding-top: 25px;
+    }
+    .cottage-page-title {
+        min-width: 100%;
+        padding: 15px;
+    }
+    .cottage-article {
+        padding: 20px 0
+    }
+    .cottage-article-item {
+        padding: 15px;
+    }
+    .all-cottage {
+        padding-top: 30px
+    }
+    .contacts-title {
+        font-size: 30px
+    }
+    .contacts-left {
+        justify-content:flex-start;
+        padding:15px
+    }
+    .contacts-right {
+        justify-content:flex-start
+    }
+    .contacts-left-content {
+        margin: 0
+    }
+    .contacts-right input {
+        margin-bottom: 15px;
+    }
+}
