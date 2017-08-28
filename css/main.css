@@ -744,6 +744,26 @@ h3.article-title {
     opacity: .8
 }
 
+.typical {
+    padding-top: 80px;
+    color: #747474;
+    font-size: 14px;
+}
+.typical p {
+    margin-bottom: 15px;
+    line-height: 20px
+}
+.typical .article {
+    display: block;
+    padding: 0 60px;
+    overflow: hidden
+}
+.typical h3 {
+    font-family: 'PT Serif';
+    color: #414141;
+    font-size: 24px;
+    margin-bottom: 15px
+}
 
 /* Slider */
 .img-lightbox {
