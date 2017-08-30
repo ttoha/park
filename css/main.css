@@ -241,16 +241,40 @@ h3.article-title {
     height: 460px;
     overflow: hidden;
     position: relative;
-    background: transparent url(../img/main-map.jpg) no-repeat center top;
+}
+.main-contacts-bg:before {
+    content: '';
+    position: absolute;
+    left: 48%;
+    width: 100%; height: 200%;
+    transform: rotateZ(9deg);
+    background-color: rgba(255, 134, 77,.80);
+    box-shadow: 0 0 12px rgba(22, 23, 25, 0.25);
+    opacity: .8;
+    z-index: 2
+}
+.main-contacts-bg--other-page:before {
+    display: none;
 }
 .main-contacts {
+    position: absolute;
+    top:0; right: 0;
     display: flex;
     width: 45%; height: 100%;
     float: right;
     flex-direction:column;
     justify-content:center;
     color:#fff;
-
+    z-index: 3
+}
+.main-contacts-bg--other-page .main-contacts {
+    top: 50%;
+    height: auto; width: 50%;
+    padding:50px 0 50px 100px;
+    box-shadow: 0 0 12px rgba(22, 23, 25, 0.25);
+    border-radius: 8px 0 0 8px;
+    transform: translate(0, -50%);
+    background-color: rgba(255, 134, 77,.80);
 }
 .main-contacts .main-contacts-title {
     font-family: 'PT Serif';
@@ -270,6 +294,7 @@ h3.article-title {
     margin: 0 auto;
     display: flex;
     align-items:center;
+    background-color: #fff
 }
 .main-buy-title {
     display: flex;
@@ -369,7 +394,7 @@ h3.article-title {
     background-color: #fff
 }
 .article:last-of-type {
-    margin-bottom: 180px
+    margin-bottom: 130px
 }
 .article-img {
     min-width: 458px;
@@ -636,15 +661,15 @@ h3.article-title {
 
 }
 .contacts-left {
-    padding: 20px 0;
     flex-basis: 50%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    background: transparent url(../img/contacts.png) no-repeat center center;
+    position: relative
 }
 .contacts-left-content {
-    margin-right: -120px
+    position: absolute;
+    top: 20px
 }
 .contacts-right {
     padding: 20px 0;
@@ -664,9 +689,6 @@ h3.article-title {
     font-size: 16px;
     color: #fff;
     margin-bottom: 25px
-}
-.contacts-content {
-    height: 305px;
 }
 .contacts-content-phone {
     font-size: 18px;
@@ -764,6 +786,19 @@ h3.article-title {
     font-size: 24px;
     margin-bottom: 15px
 }
+
+
+.gallery-item {
+    padding-top: 200px;
+     background-size: 100% 100%;
+}
+.gallery .main-slider-title {
+    color:#fff;
+    font-size: 100px;
+    font-weight: 300;
+    text-align: center
+}
+
 
 /* Slider */
 .img-lightbox {
@@ -957,4 +992,84 @@ h3.article-title {
 .slick-arrow.slick-next span {
     left: 0;
     background: transparent url("../img/slider-arrow-right.png") no-repeat left top
+}
+
+
+
+#map {width: 100%;height: 460px;}
+#mapContact {width: 100%; height:100%}
+
+
+
+
+
+
+
+
+
+
+
+.flipster-wrap {
+    width: 1064px;
+    margin: 0 auto
+}
+ #carousel {
+  height: 700px;
+  width: 960px;
+  background-color: #fff;
+  position: relative;
+  margin-bottom: 0.5em;
+}
+
+#carousel .shadow {
+  -moz-box-shadow: 0px 16px 26px #888888;
+  -webkit-box-shadow: 0px 16px 26px #888888;
+  box-shadow: 0px 16px 26px #888888;
+}
+
+#carousel .slide {
+  position: absolute;
+  overflow: hidden;
+}
+
+#carousel .slide a:hover img {
+  margin-top: 2px;
+}
+
+#carousel .slide img {
+  width:  100%;
+  height: 100%;
+}
+
+#carousel .slide p {
+  position: relative;
+  padding: 0;
+  margin:  0;
+  height:  100%
+}
+
+#carousel .slide span {
+  background-color: #000;
+  color: #fff;
+  font-size: 0.8em;
+  font-family: sans-serif;
+  position: absolute;
+  padding: 5px;
+  width: 100%;
+  bottom: 0;
+  z-index: 99;
+}
+
+#carousel .navigate-left {
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  left: 220px;
+}
+
+#carousel .navigate-right {
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 484px;
 }

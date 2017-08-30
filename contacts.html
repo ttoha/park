@@ -14,10 +14,11 @@
 	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript" src="js/mediaelement-and-player.min.js"></script>
 	<script type="text/javascript" src="js/jquery.sidr.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5b7Lp4T9q6UXrmvYXSY-aw8hGf7mcPQ&language=uk"></script>
 	<script type="text/javascript" src="js/lightbox.js"></script>
 	<script type="text/javascript" src="js/function.js"></script>
 </head>
-<body>
+<body onload="initMapContact()">
     <div class="mobile-menu" id="sidr">
         <ul>
             <li><a href="#" title="О комплексе">О комплексе</a></li>
@@ -71,15 +72,7 @@
 
     <div class="contacts">
         <div class="contacts-left">
-            <div class="contacts-left-content">
-                <h2 class="contacts-title">
-                    Офис продаж
-                </h2>
-                <div class="contacts-content">
-                    <div class="contacts-content-phone">+38 (044) 123-45-67</div>
-                    <div class="contacts-content-mail">info@mihalovskypark.com.ua</div>
-                </div>
-            </div>
+            <div id="mapContact"></div>
         </div>
         <div class="contacts-right">
             <form action="#">

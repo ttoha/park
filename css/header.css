@@ -22,8 +22,10 @@ header {
 .logo a {
     display: table;
     margin-bottom: -40px;
+    padding: 28px 22px;
     position: relative;
     z-index: 1;
+    background-color: #78aa46;
     box-shadow: 0 3px 7px rgba(18,20,23,.25);
 }
 .logo a img {

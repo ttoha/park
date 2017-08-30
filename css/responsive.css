@@ -209,6 +209,9 @@
         flex-direction: column;
         min-height: inherit
     }
+    #mapContact {
+        min-height: 400px;
+    }
 }
 @media (min-width: 768px) AND (max-width: 1024px) {
 
@@ -284,7 +287,6 @@
     }
     .contacts-left {
         justify-content:flex-start;
-        padding:15px
     }
     .contacts-right {
         justify-content:flex-start
