@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script
+			  src="https://code.jquery.com/jquery-2.2.4.min.js"
+			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript" src="js/mediaelement-and-player.min.js"></script>
+	<script type="text/javascript" src="js/jquery.sidr.min.js"></script>
+	<script type="text/javascript" src="js/function.js"></script>
+</head>
+<body>
+    <div class="mobile-menu" id="sidr">
+        <ul>
+            <li><a href="#" title="О комплексе">О комплексе</a></li>
+            <li><a href="#" title="ГЕНПЛАН">ГЕНПЛАН</a></li>
+            <li><a href="#" title="КОТТЕДЖИ">КОТТЕДЖИ</a></li>
+            <li><a href="#" title="ИНФРАСТРУКТУРА">ИНФРАСТРУКТУРА</a></li>
+            <li><a href="#" title="УСЛУГИ">УСЛУГИ</a></li>
+            <li><a href="#" title="ГАЛЕРЕЯ">ГАЛЕРЕЯ</a></li>
+            <li><a href="#" title="КОНТАКТЫ">КОНТАКТЫ</a></li>
+        </ul>
+    </div>
+
+    <div class="contacts">
+
+        <img id="imgmap" src="img/geoplan.jpg" usemap="#image-map">
+
+
+
+<map name="Map" id="Map">
+
+      <map name="image-map">
+            <area class="area" data-number="1" alt="Котедж 1" title="Котедж 1" data-toggle="modal" data-target="#cottage1" shape="poly" coords="825,607,768,677,773,696,835,717,892,631">
+        </map>
+    </div>
+
+
+    	<div class="modal right fade" id="cottage1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<div class="modal-title-wrap">
+				    	<h4 class="modal-title" id="myModalLabel">1 этажный коттедж
+с 4 комнатами</h4>
+					</div>
+
+                    <div class="modal-extra"></div>
+                    <div class="modal-close">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+				</div>
+
+				<div class="modal-body">
+
+                    <div class="modal-body-row">
+                        <div class="modal-body-img">
+                            <img src="img/content/img-plan.jpg" alt="" >
+                        </div>
+                        <div class="modal-body-cont">
+                            <div class="modal-body-title">
+                                <div class="modal-body-title-left">
+                                    <p>№85</p>
+                                    <p>Lorem Ipsum</p>
+                                </div>
+                                <div class="modal-body-title-right">
+                                    <div class="price">1 578 000 <sup>грн</sup></div>
+                                </div>
+                            </div>
+                            <h3 class="cottage-sub-title">
+                                Площадь (м2)
+                            </h3>
+                            <ul class="cottage-info">
+                                <li>
+                                    <span class="left">Общая</span>
+                                    <span class="right">120,5</span>
+                                </li>
+                                <li>
+                                    <span class="left">Гостинная</span>
+                                    <span class="right">48,5</span>
+                                </li>
+                                <li>
+                                    <span class="left">Холл</span>
+                                    <span class="right">14,5</span>
+                                </li>
+                                <li>
+                                    <span class="left">Спалня</span>
+                                    <span class="right">17,4</span>
+                                </li>
+                                <li>
+                                    <span class="left">Спалня 1</span>
+                                    <span class="right">21,3</span>
+                                </li>
+                                <li>
+                                    <span class="left">Санузел</span>
+                                    <span class="right">8,2</span>
+                                </li>
+                                <li>
+                                    <span class="left">Санузел 1</span>
+                                    <span class="right">120,5</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="modal-body-row">
+                        <div class="modal-body-img">
+                            <img src="img/content/house-plan-blueprint.png" alt="" >
+                        </div>
+                        <div class="modal-body-cont contacts-right">
+
+                            <form action="#">
+                                <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <input value="" placeholder="Имя" type="text">
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6">
+                                        <input value="" placeholder="Телефон" type="text">
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="textarea">
+                                            <textarea></textarea>
+                                            <span>Сообщение</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <input class="bt bt-prime" value="Оставить заявку" type="submit">
+                                    </div>
+                                </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+				</div>
+
+			</div><!-- modal-content -->
+		</div><!-- modal-dialog -->
+	</div><!-- modal -->
+
+
+</body>
+</html>

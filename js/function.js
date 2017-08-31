@@ -1,4 +1,13 @@
 $( document ).ready(function() {
+
+$('[data-number]').on('mouseover', function(){
+    var number = $(this).attr('data-number');
+    $('#imgmap').attr('src', 'img/geoplan'+ number +'.jpg')
+})
+$('[data-number]').on('mouseout', function(){
+    $('#imgmap').attr('src', 'img/geoplan.jpg')
+})
+
     $('.main-slider').slick({
         dots: false,
         speed: 300,
@@ -54,9 +63,6 @@ $("#carousel").slidingCarousel({
         $(this).css('position','static');
     });
 });
-
-
-
 
 var map;
 var contactMap;
@@ -372,8 +378,6 @@ function initMapContact() {
        backgroundColor: 'transparent',
        maxWidth: 400
     });
-
-
 
 google.maps.event.addListener(infowindow, 'domready', function() {
 

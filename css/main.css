@@ -45,6 +45,8 @@ table {
 	border-spacing: 0;
 }
 
+* {outline:none}
+
 
 
 body {
@@ -94,7 +96,9 @@ a:active {
     color:#fff;
     opacity:.9
 }
-
+.no-left-pad {
+    padding-left: 0
+}
 
 .page-title {
     width: 100%;
@@ -798,6 +802,172 @@ h3.article-title {
     font-weight: 300;
     text-align: center
 }
+
+
+
+	.modal.left .modal-dialog,
+	.modal.right .modal-dialog {
+		position: fixed;
+		margin: auto;
+		width: 780px;
+        top: 30px;
+        bottom: 30px;
+		-webkit-transform: translate3d(0%, 0, 0);
+		    -ms-transform: translate3d(0%, 0, 0);
+		     -o-transform: translate3d(0%, 0, 0);
+		        transform: translate3d(0%, 0, 0);
+	}
+
+	.modal.left .modal-content,
+	.modal.right .modal-content {
+		height: 100%;
+		overflow-y: auto;
+	}
+
+	.modal.right.fade .modal-dialog {
+		right: -100%;
+		-webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+		   -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+		     -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+		        transition: opacity 0.3s linear, right 0.3s ease-out;
+	}
+
+	.modal.right.fade.in .modal-dialog {
+		right: 60px;
+	}
+
+
+.modal-content {
+    background-color: #f6f6f6;
+    box-shadow: 0 0 30px rgba(18, 20, 23,.5);
+}
+.modal-header {
+    padding: 35px 50px;
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:1px solid #e6e6e6;
+}
+.modal-title-wrap {
+    width: 290px;
+}
+.modal-extra {
+    flex-grow: 1
+}
+.modal-close {
+    width: 100%;
+    max-width: 23px
+}
+.modal-close .close span {
+    font-size: 50px;
+    font-weight: 300;
+}
+.modal-title {
+    font-size: 20px;
+    color: #595959;
+    max-width: 190px;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+.modal-body-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-body-row:not(:first-of-type) .modal-body-img,
+.modal-body-row:not(:first-of-type) .modal-body-cont {
+    padding-top: 50px;
+}
+
+.modal-body-row:last-of-type .modal-body-img,
+.modal-body-row:last-of-type .modal-body-cont {
+    padding-bottom: 35px
+}
+
+.modal-body-img {
+    width: 100%;
+    min-width: 365px;
+    max-width: 365px;
+    text-align: center;
+    border-right: 1px solid #e6e6e6;
+}
+
+.modal-body-cont {
+    flex-grow: 1;
+
+    padding: 0 35px;
+}
+
+.modal-body-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px
+}
+.modal-body-title-left {
+    color: #595959;
+    font-size: 14px;
+}
+.modal-body-title-right {
+
+}
+.modal-body-title-right .price {
+    color: #595959;
+    font-size: 30px;
+    font-weight: bold
+}
+.modal-body-title-right .price sup {
+    font-size: 18px;
+}
+.modal-body-cont .cottage-info li .left,
+.modal-body-cont .cottage-info li .right {
+    background-color: #f6f6f6
+}
+
+.modal-body-cont.contacts-right {
+    background: transparent
+}
+
+.modal-body-cont.contacts-right input,
+.modal-body-cont.contacts-right textarea {
+    border-color:#d9d9d9;
+    color: #d9d9d9;
+    opacity: 1
+}
+
+.contacts-right .textarea span {
+    color: #d9d9d9;
+    background-color: #f6f6f6
+}
+
+.modal-body-cont.contacts-right input.bt {
+    color: #fff;
+    font-size: 12px;
+    max-width: 200px;
+    height: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+    font-weight: bold
+}
+.modal-body-cont.contacts-right .textarea textarea:focus,
+.modal-body-cont.contacts-right input:focus{
+    border-color: #ff864d;
+    box-shadow:none
+}
+.contacts-right .textarea textarea:focus + span {
+    color: #ff864d
+}
+
+.modal-body-cont.contacts-right input:placeholder                {color:#d9d9d9; opacity: 1}
+.modal-body-cont.contacts-right input::-webkit-input-placeholder {color:#d9d9d9; opacity: 1}
+.modal-body-cont.contacts-right input::-moz-placeholder          {color:#d9d9d9; opacity: 1}
+.modal-body-cont.contacts-right input:-moz-placeholder           {color:#d9d9d9; opacity: 1}
+.modal-body-cont.contacts-right input:-ms-input-placeholder      {color:#d9d9d9; opacity: 1}
 
 
 /* Slider */
