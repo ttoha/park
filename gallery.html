@@ -16,10 +16,11 @@
 	<script type="text/javascript" src="js/jquery.sidr.min.js"></script>
 	<script type="text/javascript" src="js/lightbox.js"></script>
 	<script type="text/javascript" src="js/jquery.flip.min.js"></script>
+	<script type="text/javascript" src="js/slider.js"></script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5b7Lp4T9q6UXrmvYXSY-aw8hGf7mcPQ&language=uk"></script>
 	<script type="text/javascript" src="js/function.js"></script>
 </head>
-<body onload="initMapContact()">
+<body onload="initMap()">
     <div class="mobile-menu" id="sidr">
         <ul>
             <li><a href="#" title="О комплексе">О комплексе</a></li>
@@ -76,46 +77,105 @@
         </div>
     </header>
 
-    <div class="contacts">
-        <div class="contacts-left">
-            <div id="mapContact"></div>
+<div class="gallery">
+    <div class="big-slider">
+        <div class="gallery-item">
+            <div class="pos-img">
+                <img src="img/gallery.png" alt="">
+            </div>
+            <div class="pos-img-content">
+                <div class="main-slider-title">
+                    Коттедж тип 1
+                </div>
+                <div class="slider">
+                    <div>
+                        <a href="img/content/gallery.png" class="img-lightbox" data-lightbox="image1" data-title="">
+                            <img src="img/content/gallery.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="img/content/gallery.png" class="img-lightbox" data-lightbox="mage1" data-title="">
+                            <img src="img/content/gallery.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="img/content/gallery.png" class="img-lightbox" data-lightbox="mage1" data-title="">
+                            <img src="img/content/gallery.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="img/content/gallery.png" class="img-lightbox" data-lightbox="mage1" data-title="">
+                            <img src="img/content/gallery.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="img/content/gallery.png" class="img-lightbox" data-lightbox="mage1" data-title="">
+                            <img src="img/content/gallery.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="img/content/gallery.png" class="img-lightbox" data-lightbox="mage1" data-title="">
+                            <img src="img/content/gallery.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-        <div class="contacts-right">
-            <form action="#">
-                <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h2 class="contacts-title">
-                            Обратная связь
-                        </h2>
-                        <div class="contacts-title-desc">
-                            Напишите нам и наш менеджер свяжется с вами в течение 15 минут
-                        </div>
+
+        <div class="gallery-item">
+            <div class="pos-img">
+                <img src="img/gallery.png" alt="">
+            </div>
+            <div class="pos-img-content">
+                <div class="main-slider-title">
+                    Коттедж тип 2
+                </div>
+                <div class="slider">
+                    <div>
+                        <a href="img/content/gallery.png" class="img-lightbox" data-lightbox="image-2" data-title="">
+                            <img src="img/content/gallery.png" alt="">
+                        </a>
                     </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <input type="text" value="" placeholder="Имя">
+                    <div>
+                        <a href="img/content/gallery.png" class="img-lightbox" data-lightbox="image-2" data-title="">
+                            <img src="img/content/gallery.png" alt="">
+                        </a>
                     </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <input type="text" value="" placeholder="E-mail">
+                    <div>
+                        <a href="img/content/gallery.png" class="img-lightbox" data-lightbox="image-2" data-title="">
+                            <img src="img/content/gallery.png" alt="">
+                        </a>
                     </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <input type="text" value="" placeholder="Телефон">
+                    <div>
+                        <a href="img/content/gallery.png" class="img-lightbox" data-lightbox="image-2" data-title="">
+                            <img src="img/content/gallery.png" alt="">
+                        </a>
                     </div>
-                    <div class="col-xs-12">
-                        <div class="textarea">
-                            <textarea></textarea>
-                            <span>Сообщение</span>
-                        </div>
-                    </div>
-                    <div class="col-xs-12">
-                        <input type="submit" class="bt bt-second" value="Оставить заявку">
+                    <div>
+                        <a href="img/content/gallery.png" class="img-lightbox" data-lightbox="image-2" data-title="">
+                            <img src="img/content/gallery.png" alt="">
+                        </a>
                     </div>
                 </div>
-                </div>
-            </form>
+            </div>
+
         </div>
     </div>
+</div>
 
+
+    <section class="main-contacts-bg main-contacts-bg--other-page">
+        <div id="map"></div>
+
+        <div class="main-contacts">
+            <h3 class="main-contacts-title">Киево-Святошинский р-н <br />
+с. Михайловка-Рубежовка</h3>
+            <p>+38 (044) 123-45-67 <br />
+info@mihalovskypark.com.ua</p>
+        </div>
+    </section>
 
     <footer>
         <div class="footer-logo">

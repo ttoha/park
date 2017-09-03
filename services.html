@@ -14,10 +14,12 @@
 	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript" src="js/mediaelement-and-player.min.js"></script>
 	<script type="text/javascript" src="js/jquery.sidr.min.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5b7Lp4T9q6UXrmvYXSY-aw8hGf7mcPQ&callback=initMap&language=uk"></script>
+	<script type="text/javascript" src="js/lightbox.js"></script>
+	<script type="text/javascript" src="js/jquery.flip.min.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5b7Lp4T9q6UXrmvYXSY-aw8hGf7mcPQ&language=uk"></script>
 	<script type="text/javascript" src="js/function.js"></script>
 </head>
-<body>
+<body onload="initMap()">
     <div class="mobile-menu" id="sidr">
         <ul>
             <li><a href="#" title="О комплексе">О комплексе</a></li>
@@ -30,17 +32,19 @@
         </ul>
     </div>
     <header>
+
         <a id="simple-menu" class="mobile-menu-btn" href="#sidr">
             <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" fill="#6b7d87"/>
             </svg>
         </a>
+        <div class="header-inner">
         <div class="logo">
             <a href="/" title="Михайловский Сад">
                 <img src="img/logo.png" alt="Михайловский Сад">
             </a>
         </div>
-        <div class="main-menu hidden-xs hidden-sm hidden-md">
+        <div class="main-menu hidden-xs hidden-sm">
             <ul>
                 <li><a href="#" title="О комплексе">О комплексе</a></li>
                 <li><a href="#" title="ГЕНПЛАН">ГЕНПЛАН</a></li>
@@ -51,6 +55,7 @@
                 <li><a href="#" title="КОНТАКТЫ">КОНТАКТЫ</a></li>
             </ul>
         </div>
+        <div class="header-right">
         <div class="header-phone hidden-xs ">
             <a href="#phone" data-toggle="collapse">
                 <i class="sprite sprite-arrow-bottom"></i>
@@ -67,6 +72,8 @@
                 <span>Перезвоните мне</span>
             </a>
         </div>
+        </div>
+        </div>
     </header>
 
     <div class="services">
@@ -79,20 +86,39 @@
                 <img src="img/content/services-img1.png" alt="">
             </div>
             <div class="article-content">
-                <h2 class="article-title">
-                    Установка солнечных коллекторов
-                </h2>
-                <div class="article-desc">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mollis pulvinar augue ac egestas. In bibendum eros sagittis fermentum ullamcorper. Maecenas consectetur leo dolor, et pellentesque neque blandit eget. Phasellus aliquet, massa eget consequat tristique, nibh justo venenatis ligula, quis auctor neque eros in mauris. Suspendisse ac ipsum id ligula convallis fermentum at ut mauris. In hac habitasse platea dictumst. Ut eget ligula et magna varius eleifend. Proin vitae ante in sapien maximus accumsan. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean a leo pharetra, consectetur erat molestie, congue mi. Vestibulum porta odio at eros blandit, a maximus mi sagittis. Etiam varius cursus elit, vitae lobortis arcu pellentesque vel. Morbi et accumsan nisl.
+                <div class="flip">
+                <div class="front">
+                    <h2 class="article-title">
+                        Установка солнечных коллекторов
+                    </h2>
+                    <div class="article-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mollis pulvinar augue ac egestas. In bibendum eros sagittis fermentum ullamcorper. Maecenas consectetur leo dolor, et pellentesque neque blandit eget. Phasellus aliquet, massa eget consequat tristique, nibh justo venenatis ligula, quis auctor neque eros in mauris.
+                    </div>
+                    <div class="article-extra">
+                        <a href="#" class="article-download" title="">
+                            <img src="img/download.png" alt="">
+                            <span>Скачать прайс лист</span>
+                        </a>
+                        <a href="#" class="bt bt-prime flip-bt">
+                            ЗАКАЗАТЬ УСЛУГУ
+                        </a>
+                    </div>
                 </div>
-                <div class="article-extra">
-                    <a href="#" class="article-download" title="">
-                        <img src="img/download.png" alt="">
-                        <span>Скачать прайс лист</span>
-                    </a>
-                    <a href="#" class="bt bt-prime">
-                        ЗАКАЗАТЬ УСЛУГУ
-                    </a>
+                <div class="back">
+                    <form class="form" action="">
+                        <span class="unflip-bt">&times;</span>
+                        <h2>Заполните форму</h2>
+                        <div class="txt-wrap"><input type="text" class="txt" placeholder="Введите ваше имя" value="" /></div>
+                        <div class="txt-wrap succes"><input type="text" class="txt" placeholder="Введите адрес электронной почты" value="" /></div>
+                        <div class="txt-wrap error">
+                            <span>Обязательное поле</span>
+                            <input type="text" class="txt" placeholder="Введите контактный номер телефона" value="" />
+                        </div>
+                    <div class="article-extra">
+                        <input class="bt bt-prime" type="submit" value="ОТПРАВИТЬ ЗАЯВКУ">
+                    </div>
+                    </form>
+                </div>
                 </div>
             </div>
         </section>
@@ -101,20 +127,39 @@
                 <img src="img/content/services-img2.png" alt="">
             </div>
             <div class="article-content">
-                <h2 class="article-title">
-                    Установка солнечных коллекторов
-                </h2>
-                <div class="article-desc">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mollis pulvinar augue ac egestas. In bibendum eros sagittis fermentum ullamcorper. Maecenas consectetur leo dolor, et pellentesque neque blandit eget. Phasellus aliquet, massa eget consequat tristique, nibh justo venenatis ligula, quis auctor neque eros in mauris. Suspendisse ac ipsum id ligula convallis fermentum at ut mauris. In hac habitasse platea dictumst. Ut eget ligula et magna varius eleifend. Proin vitae ante in sapien maximus accumsan. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean a leo pharetra, consectetur erat molestie, congue mi. Vestibulum porta odio at eros blandit, a maximus mi sagittis. Etiam varius cursus elit, vitae lobortis arcu pellentesque vel. Morbi et accumsan nisl.
+                <div class="flip">
+                <div class="front">
+                    <h2 class="article-title">
+                        Установка солнечных коллекторов
+                    </h2>
+                    <div class="article-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mollis pulvinar augue ac egestas. In bibendum eros sagittis fermentum ullamcorper. Maecenas consectetur leo dolor, et pellentesque neque blandit eget. Phasellus aliquet, massa eget consequat tristique, nibh justo venenatis ligula, quis auctor neque eros in mauris.
+                    </div>
+                    <div class="article-extra">
+                        <a href="#" class="article-download" title="">
+                            <img src="img/download.png" alt="">
+                            <span>Скачать прайс лист</span>
+                        </a>
+                        <a href="#" class="bt bt-prime flip-bt">
+                            ЗАКАЗАТЬ УСЛУГУ
+                        </a>
+                    </div>
                 </div>
-                <div class="article-extra">
-                    <a href="#" class="article-download" title="">
-                        <img src="img/download.png" alt="">
-                        <span>Скачать прайс лист</span>
-                    </a>
-                    <a href="#" class="bt bt-prime">
-                        ЗАКАЗАТЬ УСЛУГУ
-                    </a>
+                <div class="back">
+                    <form class="form" action="">
+                        <span class="unflip-bt">&times;</span>
+                        <h2>Заполните форму</h2>
+                        <div class="txt-wrap"><input type="text" class="txt" placeholder="Введите ваше имя" value="" /></div>
+                        <div class="txt-wrap succes"><input type="text" class="txt" placeholder="Введите адрес электронной почты" value="" /></div>
+                        <div class="txt-wrap error">
+                            <span>Обязательное поле</span>
+                            <input type="text" class="txt" placeholder="Введите контактный номер телефона" value="" />
+                        </div>
+                    <div class="article-extra">
+                        <input class="bt bt-prime" type="submit" value="ОТПРАВИТЬ ЗАЯВКУ">
+                    </div>
+                    </form>
+                </div>
                 </div>
             </div>
         </section>
@@ -123,20 +168,39 @@
                 <img src="img/content/services-img1.png" alt="">
             </div>
             <div class="article-content">
-                <h2 class="article-title">
-                    Установка солнечных коллекторов
-                </h2>
-                <div class="article-desc">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mollis pulvinar augue ac egestas. In bibendum eros sagittis fermentum ullamcorper. Maecenas consectetur leo dolor, et pellentesque neque blandit eget. Phasellus aliquet, massa eget consequat tristique, nibh justo venenatis ligula, quis auctor neque eros in mauris. Suspendisse ac ipsum id ligula convallis fermentum at ut mauris. In hac habitasse platea dictumst. Ut eget ligula et magna varius eleifend. Proin vitae ante in sapien maximus accumsan. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean a leo pharetra, consectetur erat molestie, congue mi. Vestibulum porta odio at eros blandit, a maximus mi sagittis. Etiam varius cursus elit, vitae lobortis arcu pellentesque vel. Morbi et accumsan nisl.
+                <div class="flip">
+                <div class="front">
+                    <h2 class="article-title">
+                        Установка солнечных коллекторов
+                    </h2>
+                    <div class="article-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mollis pulvinar augue ac egestas. In bibendum eros sagittis fermentum ullamcorper. Maecenas consectetur leo dolor, et pellentesque neque blandit eget. Phasellus aliquet, massa eget consequat tristique, nibh justo venenatis ligula, quis auctor neque eros in mauris.
+                    </div>
+                    <div class="article-extra">
+                        <a href="#" class="article-download" title="">
+                            <img src="img/download.png" alt="">
+                            <span>Скачать прайс лист</span>
+                        </a>
+                        <a href="#" class="bt bt-prime flip-bt">
+                            ЗАКАЗАТЬ УСЛУГУ
+                        </a>
+                    </div>
                 </div>
-                <div class="article-extra">
-                    <a href="#" class="article-download" title="">
-                        <img src="img/download.png" alt="">
-                        <span>Скачать прайс лист</span>
-                    </a>
-                    <a href="#" class="bt bt-prime">
-                        ЗАКАЗАТЬ УСЛУГУ
-                    </a>
+                <div class="back">
+                    <form class="form" action="">
+                        <span class="unflip-bt">&times;</span>
+                        <h2>Заполните форму</h2>
+                        <div class="txt-wrap"><input type="text" class="txt" placeholder="Введите ваше имя" value="" /></div>
+                        <div class="txt-wrap succes"><input type="text" class="txt" placeholder="Введите адрес электронной почты" value="" /></div>
+                        <div class="txt-wrap error">
+                            <span>Обязательное поле</span>
+                            <input type="text" class="txt" placeholder="Введите контактный номер телефона" value="" />
+                        </div>
+                    <div class="article-extra">
+                        <input class="bt bt-prime" type="submit" value="ОТПРАВИТЬ ЗАЯВКУ">
+                    </div>
+                    </form>
+                </div>
                 </div>
             </div>
         </section>
@@ -145,23 +209,43 @@
                 <img src="img/content/services-img3.png" alt="">
             </div>
             <div class="article-content">
-                <h2 class="article-title">
-                    Установка солнечных коллекторов
-                </h2>
-                <div class="article-desc">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mollis pulvinar augue ac egestas. In bibendum eros sagittis fermentum ullamcorper. Maecenas consectetur leo dolor, et pellentesque neque blandit eget. Phasellus aliquet, massa eget consequat tristique, nibh justo venenatis ligula, quis auctor neque eros in mauris. Suspendisse ac ipsum id ligula convallis fermentum at ut mauris. In hac habitasse platea dictumst. Ut eget ligula et magna varius eleifend. Proin vitae ante in sapien maximus accumsan. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean a leo pharetra, consectetur erat molestie, congue mi. Vestibulum porta odio at eros blandit, a maximus mi sagittis. Etiam varius cursus elit, vitae lobortis arcu pellentesque vel. Morbi et accumsan nisl.
+                <div class="flip">
+                <div class="front">
+                    <h2 class="article-title">
+                        Установка солнечных коллекторов
+                    </h2>
+                    <div class="article-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mollis pulvinar augue ac egestas. In bibendum eros sagittis fermentum ullamcorper. Maecenas consectetur leo dolor, et pellentesque neque blandit eget. Phasellus aliquet, massa eget consequat tristique, nibh justo venenatis ligula, quis auctor neque eros in mauris.
+                    </div>
+                    <div class="article-extra">
+                        <a href="#" class="article-download" title="">
+                            <img src="img/download.png" alt="">
+                            <span>Скачать прайс лист</span>
+                        </a>
+                        <a href="#" class="bt bt-prime flip-bt">
+                            ЗАКАЗАТЬ УСЛУГУ
+                        </a>
+                    </div>
                 </div>
-                <div class="article-extra">
-                    <a href="#" class="article-download" title="">
-                        <img src="img/download.png" alt="">
-                        <span>Скачать прайс лист</span>
-                    </a>
-                    <a href="#" class="bt bt-prime">
-                        ЗАКАЗАТЬ УСЛУГУ
-                    </a>
+                <div class="back">
+                    <form class="form" action="">
+                        <span class="unflip-bt">&times;</span>
+                        <h2>Заполните форму</h2>
+                        <div class="txt-wrap"><input type="text" class="txt" placeholder="Введите ваше имя" value="" /></div>
+                        <div class="txt-wrap succes"><input type="text" class="txt" placeholder="Введите адрес электронной почты" value="" /></div>
+                        <div class="txt-wrap error">
+                            <span>Обязательное поле</span>
+                            <input type="text" class="txt" placeholder="Введите контактный номер телефона" value="" />
+                        </div>
+                    <div class="article-extra">
+                        <input class="bt bt-prime" type="submit" value="ОТПРАВИТЬ ЗАЯВКУ">
+                    </div>
+                    </form>
+                </div>
                 </div>
             </div>
         </section>
+
     </div>
 
 

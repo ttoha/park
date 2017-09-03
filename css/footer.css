@@ -48,3 +48,28 @@ footer .site-info li {
 footer .site-info li .sprite {
     margin-right: 5px;
 }
+
+.breadcrumbs {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: #595959;
+}
+.breadcrumbs ul {
+    margin:0; padding:0;
+    list-style:none
+}
+.breadcrumbs ul li {
+    display: inline-block;
+    color:#8e8e8e;
+    font-size: 14px;
+    margin-right: 5px;
+}
+.breadcrumbs ul li a {
+    color:#8e8e8e;
+    margin-right:10px;
+}
+.breadcrumbs ul li span {
+    color:#fff;
+}

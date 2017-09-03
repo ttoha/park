@@ -1,14 +1,18 @@
 header {
-    display: flex;
     width: 100%;
     height: 80px;
     max-width:1745px;
     padding: 0 10px;
-    justify-content:space-between;
-    align-items:center;
     box-shadow:0 3px 7px rgba(18,20,23,.15);
     position: relative;
     z-index: 1
+}
+.header-inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content:space-between;
+    align-items:center;
 }
 .mobile-menu-btn {
     display: none
@@ -37,19 +41,19 @@ header {
 }
 .main-menu ul {
     width: 100%;
-    margin: 0; padding: 0 0 0 50px;
+    margin: 0; padding: 0 0 0 20px;
     list-style: none;
     position:relative;
     bottom: -2px
 }
 .main-menu ul li {
     display: inline-block;
-    padding:0 5px;
+    padding:0 4px;
 }
 .main-menu ul li a {
     display: block;
     color: #585858;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     padding:0 2px 5px;
     text-transform: uppercase;
@@ -59,18 +63,20 @@ header {
 .main-menu ul li.active a {
     border-color: #b2d78d
 }
+.header-right {
+    display: flex;
+    flex-direction:column-reverse
+}
 .header-phone {
-    width: 225px;
-    margin-right: 15px;
     position: relative;
-    font-weight: bold
+    font-weight: bold;
 }
 .header-phone .collapse,
 .header-phone .collapsing {
     position: absolute;
     z-index: -1;
-    left:-15px; top:49px;
-    width:240px;
+    left:-15px; top:26px;
+    width:205px;
     background-color:#fff;
     padding:20px 0 20px 30px;
     color: #585858;
@@ -91,5 +97,6 @@ header {
     top:-1px
 }
 .callback {
-    min-width:182px
+    min-width:182px;
+    margin-bottom: 10px
 }

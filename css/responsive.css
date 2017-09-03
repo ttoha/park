@@ -1,4 +1,5 @@
 @media (max-width: 1200px) {
+    .logo {width: 180px;}
     .article .article-extra .bt {
         right: 0
     }
@@ -10,9 +11,10 @@
     body {
         font-size: 16px
     }
-    header {
-        justify-content:flex-start
+    .header-inner {
+        width: calc(100% - 40px)
     }
+
     .pad60 {
         padding-top: 30px!important;
     }
@@ -212,10 +214,51 @@
     #mapContact {
         min-height: 400px;
     }
+    .form .txt-wrap {
+        margin-bottom: 20px;
+    }
+    .flip .front,
+    .flip .back {
+        padding: 0
+    }
+
+    .article-desc {
+        max-height: 195px;
+    }
+    .article-extra .bt {
+        display: table
+    }
+    .article-extra {
+        left: 0; right: 0;
+        flex-direction: column
+    }
+    .flip .flip-bt {
+        position: relative
+    }
+    .article:nth-of-type(even) .article-extra .article-download {
+        order: 0
+    }
+
+    .article .article-extra .article-download {
+        margin-bottom: 15px
+    }
+    .article-extra {
+        bottom: 0;
+    }
+    .flip .unflip-bt {
+        top: -4px; right: -2px;
+    }
+    .article:nth-of-type(even) .flip .unflip-bt {
+        right: auto;
+        left: -2px;
+    }
 }
 @media (min-width: 768px) AND (max-width: 1024px) {
 
+
 }
+
+
 @media (max-width: 767px) {
     header {
         height: auto;
@@ -243,10 +286,13 @@
         line-height: 40px;
     }
     .article {
-        flex-wrap: wrap
+        flex-direction: column
     }
     .article-img {
         min-width: 100%
+    }
+    .article-title {
+        margin-bottom: 15px
     }
     .article-content {
         min-width: 100%;
@@ -255,16 +301,26 @@
     .article:nth-of-type(even) .article-img {
         order: 0
     }
-    .article:nth-of-type(even) .article-extra .article-download {
-        order: 0
+
+    .article-desc {
+        max-height: inherit;
     }
     .page-title {
         padding: 0 15px
     }
+    .article-extra {
+        min-height: 72px;
+    }
     .article-extra .bt {
         text-align: center;
         line-height: 15px;
-        padding: 0 19px;
+        padding: 14px 19px;
+    }
+    .article .article-extra {
+        position: relative
+    }
+    .article:nth-of-type(even) .flip .unflip-bt {
+        left: auto; right: -2px;
     }
     .services {
         padding-top: 25px;
@@ -296,5 +352,14 @@
     }
     .contacts-right input {
         margin-bottom: 15px;
+    }
+    .main-contacts-bg--other-page .main-contacts {
+        position: static;
+        width: 100%;
+        padding: 15px;
+        transform: translate(0,0)
+    }
+    #map {
+        display: none
     }
 }

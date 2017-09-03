@@ -92,9 +92,10 @@ a:active {
     text-transform: uppercase;
     justify-content: center;
 }
-.bt:hover {
+.bt:hover, .bt:focus {
     color:#fff;
-    opacity:.9
+    opacity:.9;
+    outline: 0;
 }
 .no-left-pad {
     padding-left: 0
@@ -412,10 +413,50 @@ h3.article-title {
 }
 .article-content {
     flex-grow: 1;
-    padding: 0 60px;
+}
+.flip {
+    display: flex;
+    height: 100%
+}
+.flip .front {
+    position: relative;
+    padding: 60px;
+    background-color: #fff
+}
+.flip .back {
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
+    padding: 0 60px;
+    background-color: #fff
+}
+.flip .back .bt {
+    display: none
+}
+.flip .form h2 {
+    font-size: 24px;
+    color: #414141;
+    text-align: left;
+    text-transform: none;
+    margin-bottom: 15px;
+    font-weight: normal
+}
+.flip .form .txt {
+    color: #414141;
+}
+.flip .unflip-bt {
+    color: #585858;
+    font-size: 42px;
+    font-weight: 300;
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    cursor: pointer;
+    opacity: .8
+}
+.flip .unflip-bt:hover {
+    opacity: 1
 }
 .article-title {
     color: #414141;
@@ -427,20 +468,27 @@ h3.article-title {
 .article-desc {
     color: #737373;
     font-size: 14px;
-    line-height: 24px
+    line-height: 24px;
+    max-height: 240px;
+    overflow: auto;
 }
 
 
 .article-extra {
+    position: absolute;
+    min-height: 28px;
+    bottom: 30px; left: 60px; right: 60px;
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
 }
 .article:nth-of-type(even) .article-extra .article-download {
     order: 2
 }
 .article:nth-of-type(even) .article-extra .bt {
     right: auto; left: -100px;
+}
+.article:nth-of-type(even) .flip .unflip-bt {
+    right: auto; left: 20px;
 }
 .article-download {
     display: flex;
@@ -451,19 +499,25 @@ h3.article-title {
 .article-download img {
     margin-right: 12px
 }
+
+
 .article-extra .bt {
     padding: 0 40px;
     position: relative;
-    right: -100px;
+    top:0; right: -100px;
     height: 44px;
     line-height: 44px;
     font-weight: bold
 }
+.flip .back {
+    position: absolute;
+    top:-8px;
+}
+
 
 .cottage {
-    background: transparent url(../img/cottage-bg.png) no-repeat center top;
-    background-size: 100% auto;
     padding-top: 560px;
+    position: relative
 }
 .cottage-top {
     display: flex;
@@ -659,6 +713,103 @@ h3.article-title {
     font-weight: 600;
 }
 
+
+.modal--callback {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal--callback:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal--callback .modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.modal--callback .modal-content {
+    background-color: #262626;
+    padding: 50px;
+    text-align: center;
+    border: 0;
+}
+
+.modal--callback .close {
+    color: #585858;
+    font-size: 42px;
+    font-weight: 300;
+    position: absolute;
+    right: 20px; top: 8px;
+    opacity: 1;
+    text-shadow: none
+}
+.modal--callback .close:hover {
+    color:#fff;
+}
+
+.form h2 {
+    margin: 0; padding: 0;
+    color:#fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+
+.form .txt {
+    background: transparent;
+    border: 0;
+    border-bottom:1px #5a5a5a solid;
+    line-height: 60px;
+    padding: 0 10px;
+    color:#fff;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 300
+}
+.form .txt-wrap.succes .txt {
+    border-bottom:3px #97cb63 solid;
+    margin-bottom: -2px;
+}
+.form .txt-wrap {
+    margin-bottom: 30px;
+    position: relative
+}
+.form .txt-wrap span {
+    position: absolute;
+    left: 0; top: -6px;
+    font-size: 14px;
+    display: none;
+    color: #ff6666
+}
+.form .txt-wrap.error .txt {
+    border-bottom:3px #ff6666 solid;
+    margin-bottom: -2px;
+    color: #ff6666
+}
+.form .txt-wrap.error .txt:placeholder                {color:#ff6666}
+.form .txt-wrap.error .txt::-webkit-input-placeholder {color:#ff6666}
+.form .txt-wrap.error .txt::-moz-placeholder          {color:#ff6666}
+.form .txt-wrap.error .txt:-moz-placeholder           {color:#ff6666}
+.form .txt-wrap.error .txt:-ms-input-placeholder      {color:#ff6666}
+.form .txt-wrap.error span {
+    display: block
+}
+.form .bt-prime--center {
+    height: 60px;
+    margin:0 auto;
+    padding: 0 45px;
+    font-size: 20px;
+    font-weight: 700
+}
+
 .contacts {
     display: flex;
     min-height: calc(100% - 161px);
@@ -791,16 +942,106 @@ h3.article-title {
     margin-bottom: 15px
 }
 
+.big-slider {
+    width: 100%
+}
+.gallery-item {
+    width: 100%;
+    position: relative;
+}
 
+.pos-img {
+    position: absolute;
+    left:0; top:0; right:0;
+}
+.pos-img img {
+    width: 100%
+}
+.pos-img:before {
+    content: '';
+    position: absolute;
+    left:0; right:0; bottom:0;
+    height: 200px;
+background: -moz-linear-gradient(top,  rgba(245,245,245,0) 0%, rgba(245,245,245,1) 100%);
+background: -webkit-linear-gradient(top,  rgba(245,245,245,0) 0%,rgba(245,245,245,1) 100%);
+background: linear-gradient(to bottom,  rgba(245,245,245,0) 0%,rgba(245,245,245,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f5f5f5', endColorstr='#f5f5f5',GradientType=0 );
+}
+.pos-img-content {
+    position: relative;
+    z-index: 1
+}
 .gallery-item {
     padding-top: 200px;
-     background-size: 100% 100%;
+    background-size: 100% 100%;
 }
+
+
+.gallery .big-slider .slick-arrow span {
+    transform: translate(0);
+    top: 220px
+}
+
 .gallery .main-slider-title {
     color:#fff;
     font-size: 100px;
     font-weight: 300;
-    text-align: center
+    text-align: center;
+    margin-bottom: 200px;
+}
+.gallery .slider {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 60px;
+}
+.gallery .big-slider .slider .slick-arrow {
+    transform: translate(0, -50%);
+    top: 50%;
+    background: #fff;
+    width: 50px; height: 120px;
+    color:#f5f5f5;
+    box-shadow: 0 0 12px rgba(22, 23, 25, 0.08);
+    opacity: 1
+}
+.gallery .big-slider .slider .slick-arrow:hover {
+    background: #ff864d;
+}
+
+.gallery .big-slider .slider .slick-arrow.slick-prev {
+    border-radius: 8px 0 0 8px;
+    left: -50px
+}
+.gallery .big-slider .slider .slick-arrow.slick-next {
+    border-radius: 0 8px 8px 0;
+    right: -50px
+}
+.gallery .big-slider .slider .slick-arrow:hover span {
+    background-image: none
+}
+.gallery .big-slider .slider .slick-arrow span {
+    top: 50%; left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 8px;
+}
+.gallery .big-slider .slider .slick-arrow span svg {
+    width: 100%; height: 100%;
+    color:#000;
+    fill:#000;
+}
+.gallery .big-slider .slider .slick-arrow:hover svg {
+    color:#fff;
+    fill:#fff;
+}
+.gallery .slider .slick-slide {
+    transform: scale(1,.9);
+    filter: blur(2px);
+    border-radius: 6px;
+    overflow: hidden
+}
+
+.gallery .slider .slick-current {
+    transform: scale(1);
+    filter: blur(0);
 }
 
 
@@ -1168,78 +1409,3 @@ h3.article-title {
 
 #map {width: 100%;height: 460px;}
 #mapContact {width: 100%; height:100%}
-
-
-
-
-
-
-
-
-
-
-
-.flipster-wrap {
-    width: 1064px;
-    margin: 0 auto
-}
- #carousel {
-  height: 700px;
-  width: 960px;
-  background-color: #fff;
-  position: relative;
-  margin-bottom: 0.5em;
-}
-
-#carousel .shadow {
-  -moz-box-shadow: 0px 16px 26px #888888;
-  -webkit-box-shadow: 0px 16px 26px #888888;
-  box-shadow: 0px 16px 26px #888888;
-}
-
-#carousel .slide {
-  position: absolute;
-  overflow: hidden;
-}
-
-#carousel .slide a:hover img {
-  margin-top: 2px;
-}
-
-#carousel .slide img {
-  width:  100%;
-  height: 100%;
-}
-
-#carousel .slide p {
-  position: relative;
-  padding: 0;
-  margin:  0;
-  height:  100%
-}
-
-#carousel .slide span {
-  background-color: #000;
-  color: #fff;
-  font-size: 0.8em;
-  font-family: sans-serif;
-  position: absolute;
-  padding: 5px;
-  width: 100%;
-  bottom: 0;
-  z-index: 99;
-}
-
-#carousel .navigate-left {
-  cursor: pointer;
-  position: absolute;
-  bottom: 10px;
-  left: 220px;
-}
-
-#carousel .navigate-right {
-  cursor: pointer;
-  position: absolute;
-  bottom: 10px;
-  right: 484px;
-}

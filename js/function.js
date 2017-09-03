@@ -1,19 +1,39 @@
 $( document ).ready(function() {
 
-$('[data-number]').on('mouseover', function(){
-    var number = $(this).attr('data-number');
-    $('#imgmap').attr('src', 'img/geoplan'+ number +'.jpg')
-})
-$('[data-number]').on('mouseout', function(){
-    $('#imgmap').attr('src', 'img/geoplan.jpg')
-})
+    $('[data-number]').on('mouseover', function(){
+        var number = $(this).attr('data-number');
+        $('#imgmap').attr('src', 'img/geoplan'+ number +'.jpg')
+    })
+    $('[data-number]').on('mouseout', function(){
+        $('#imgmap').attr('src', 'img/geoplan.jpg')
+    })
+
+
+    $(".flip").flip({
+      axis: 'x',
+      trigger: 'manual'
+    });
+
+    $(".flip-bt").on('click', function(e){
+        e.preventDefault();
+        $(this).parents('.flip').flip(true);
+        $(this).hide();
+        $(this).parents('.flip').find('.back .bt').show();
+    })
+    $(".unflip-bt").on('click', function(e){
+        e.preventDefault();
+        $(this).parents('.flip').flip(false);
+        $(this).parents('.flip').find('.back .bt').hide();
+        $(this).parents('.flip').find('.front .bt').show();
+    })
+
 
     $('.main-slider').slick({
         dots: false,
         speed: 300,
         slidesToShow: 1,
         adaptiveHeight: true,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 2000,
         prevArrow: '<div data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button"><span></span></div>',
         nextArrow: '<div data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button"><span></span></div>'
@@ -28,6 +48,54 @@ $('[data-number]').on('mouseout', function(){
       name: 'sidr',
       side: 'right'
     });
+
+    if ($(document.body).width() > 1200) {
+        $('#simple-menu').sidr({
+          name: 'sidr',
+          side: 'right'
+        });
+    }
+
+    $('.main-slider').slick({
+        dots: false,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        prevArrow: '<div data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button"><span></span></div>',
+        nextArrow: '<div data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button"><span></span></div>'
+    });
+
+    $('.big-slider').slick({
+        dots: false,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        autoplay: false,
+        beforeChange: function(){
+            alert('asdfasf')
+        },
+        prevArrow: '<div data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button"><span></span></div>',
+        nextArrow: '<div data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button"><span></span></div>'
+    });
+    $('.big-slider').on('afterChange', function(event) {
+         $('.slider').slick('reinit');
+    });
+    $('.slider').slick({
+        dots: false,
+        speed: 300,
+          centerMode: true,
+          infinite: true,
+          centerPadding: '60px',
+        slidesToShow: 1,
+        draggable:false,
+        adaptiveHeight: true,
+        autoplay: false,
+        prevArrow: '<div data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button"><span><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve"><g><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"/></g></svg></span></div>',
+        nextArrow: '<div data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button"><span><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve"><g><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"/></g></svg></span></div>'
+    });
+
     $('.small-slider').slick({
         dots: false,
         slidesToShow: 3,
@@ -48,11 +116,7 @@ $('[data-number]').on('mouseout', function(){
             }
         ]
     });
-$("#carousel").slidingCarousel({
-     squeeze : 500,
-     animate : 250,
-     shadow  : false
- });
+
     $('.all-cottage-item-hover').on('mouseover', function(){
         var par = $(this).parent('.all-cottage-item').outerHeight();
         $(this).parent('.all-cottage-item').css('height', par);
@@ -64,12 +128,10 @@ $("#carousel").slidingCarousel({
     });
 });
 
+
 var map;
 var contactMap;
-
 function initMap() {
-
-
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 50.518847, lng: 30.1685},
         zoom: 14,
