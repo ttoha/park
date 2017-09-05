@@ -16,10 +16,11 @@
 	<script type="text/javascript" src="js/jquery.sidr.min.js"></script>
 	<script type="text/javascript" src="js/lightbox.js"></script>
 	<script type="text/javascript" src="js/jquery.flip.min.js"></script>
+	<script type="text/javascript" src="js/slider.js"></script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5b7Lp4T9q6UXrmvYXSY-aw8hGf7mcPQ&language=uk"></script>
 	<script type="text/javascript" src="js/function.js"></script>
 </head>
-<body>
+<body onload="initMap()">
     <div class="mobile-menu" id="sidr">
         <ul>
             <li><a href="#" title="О комплексе">О комплексе</a></li>
@@ -67,7 +68,7 @@
             </div>
         </div>
         <div class="callback">
-            <a href="#" class="bt bt-prime" data-toggle="modal" data-target="#callback" title="Перезвоните мне">
+            <a href="#" class="bt bt-prime" data-toggle="modal" data-target="#myModal" title="Перезвоните мне">
                 <i class="sprite sprite-phone2 hidden-xs"></i>
                 <span>Перезвоните мне</span>
             </a>
@@ -76,413 +77,327 @@
         </div>
     </header>
 
-    <div class="all-cottage">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                    <article class="all-cottage-item">
-                        <div class="all-cottage-item-hover">
-                            <div class="all-cottage-img">
-                                <a href="#" title="Коттедж тип 2">
-                                    <img src="img/content/cottages.png" alt="">
-                                </a>
-                            </div>
-                            <div class="all-cottage-content">
-                                <div class="all-cottage-content-top">
-                                    <h3 class="all-cottage-title">
-                                        <a href="#" title="Коттедж тип 2">Коттедж тип 2</a>
-                                        <span>1 этаж, 4 команты</span>
-                                    </h3>
-                                    <div class="size">
-                                        150 м<sup>2</sup>
-                                    </div>
-                                </div>
-                                <div class="price">
-                                    1 578 000<sup>ГРН</sup>
-                                </div>
-                                <div class="count">
-                                    7 свободно | 3 бронь
-                                </div>
-                                <div class="extra">
-                                    <h3 class="cottage-sub-title">
-                                        Площадь (м2)
-                                    </h3>
-                                    <ul class="cottage-info">
-                                        <li>
-                                            <span class="left">Общая</span>
-                                            <span class="right">120,5</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Гостинная</span>
-                                            <span class="right">48,5</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Холл</span>
-                                            <span class="right">14,5</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Спалня</span>
-                                            <span class="right">17,4</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Спалня 1</span>
-                                            <span class="right">21,3</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Санузел</span>
-                                            <span class="right">8,2</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Санузел 1</span>
-                                            <span class="right">120,5</span>
-                                        </li>
-                                    </ul>
-                                    <a href="#" class="bt bt-second">
-                                        ПОДРОБНЕЕ
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                    <article class="all-cottage-item">
-                        <div class="all-cottage-item-hover">
-                            <div class="all-cottage-img">
-                                <a href="#" title="Коттедж тип 2">
-                                    <img src="img/content/cottages.png" alt="">
-                                </a>
-                            </div>
-                            <div class="all-cottage-content">
-                                <div class="all-cottage-content-top">
-                                    <h3 class="all-cottage-title">
-                                        <a href="#" title="Коттедж тип 2">Коттедж тип 2</a>
-                                        <span>1 этаж, 4 команты</span>
-                                    </h3>
-                                    <div class="size">
-                                        150 м<sup>2</sup>
-                                    </div>
-                                </div>
-                                <div class="price">
-                                    1 578 000<sup>ГРН</sup>
-                                </div>
-                                <div class="count">
-                                    7 свободно | 3 бронь
-                                </div>
-                                <div class="extra">
-                                    <h3 class="cottage-sub-title">
-                                        Площадь (м2)
-                                    </h3>
-                                    <ul class="cottage-info">
-                                        <li>
-                                            <span class="left">Общая</span>
-                                            <span class="right">120,5</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Гостинная</span>
-                                            <span class="right">48,5</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Холл</span>
-                                            <span class="right">14,5</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Спалня</span>
-                                            <span class="right">17,4</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Спалня 1</span>
-                                            <span class="right">21,3</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Санузел</span>
-                                            <span class="right">8,2</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Санузел 1</span>
-                                            <span class="right">120,5</span>
-                                        </li>
-                                    </ul>
-                                    <a href="#" class="bt bt-second">
-                                        ПОДРОБНЕЕ
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                    <article class="all-cottage-item">
-                        <div class="all-cottage-item-hover">
-                            <div class="all-cottage-img">
-                                <a href="#" title="Коттедж тип 2">
-                                    <img src="img/content/cottages.png" alt="">
-                                </a>
-                            </div>
-                            <div class="all-cottage-content">
-                                <div class="all-cottage-content-top">
-                                    <h3 class="all-cottage-title">
-                                        <a href="#" title="Коттедж тип 2">Коттедж тип 2</a>
-                                        <span>1 этаж, 4 команты</span>
-                                    </h3>
-                                    <div class="size">
-                                        150 м<sup>2</sup>
-                                    </div>
-                                </div>
-                                <div class="price">
-                                    1 578 000<sup>ГРН</sup>
-                                </div>
-                                <div class="count">
-                                    7 свободно | 3 бронь
-                                </div>
-                                <div class="extra">
-                                    <h3 class="cottage-sub-title">
-                                        Площадь (м2)
-                                    </h3>
-                                    <ul class="cottage-info">
-                                        <li>
-                                            <span class="left">Общая</span>
-                                            <span class="right">120,5</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Гостинная</span>
-                                            <span class="right">48,5</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Холл</span>
-                                            <span class="right">14,5</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Спалня</span>
-                                            <span class="right">17,4</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Спалня 1</span>
-                                            <span class="right">21,3</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Санузел</span>
-                                            <span class="right">8,2</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Санузел 1</span>
-                                            <span class="right">120,5</span>
-                                        </li>
-                                    </ul>
-                                    <a href="#" class="bt bt-second">
-                                        ПОДРОБНЕЕ
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                    <article class="all-cottage-item">
-                        <div class="all-cottage-item-hover">
-                            <div class="all-cottage-img">
-                                <a href="#" title="Коттедж тип 2">
-                                    <img src="img/content/cottages.png" alt="">
-                                </a>
-                            </div>
-                            <div class="all-cottage-content">
-                                <div class="all-cottage-content-top">
-                                    <h3 class="all-cottage-title">
-                                        <a href="#" title="Коттедж тип 2">Коттедж тип 2</a>
-                                        <span>1 этаж, 4 команты</span>
-                                    </h3>
-                                    <div class="size">
-                                        150 м<sup>2</sup>
-                                    </div>
-                                </div>
-                                <div class="price">
-                                    1 578 000<sup>ГРН</sup>
-                                </div>
-                                <div class="count">
-                                    7 свободно | 3 бронь
-                                </div>
-                                <div class="extra">
-                                    <h3 class="cottage-sub-title">
-                                        Площадь (м2)
-                                    </h3>
-                                    <ul class="cottage-info">
-                                        <li>
-                                            <span class="left">Общая</span>
-                                            <span class="right">120,5</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Гостинная</span>
-                                            <span class="right">48,5</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Холл</span>
-                                            <span class="right">14,5</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Спалня</span>
-                                            <span class="right">17,4</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Спалня 1</span>
-                                            <span class="right">21,3</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Санузел</span>
-                                            <span class="right">8,2</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Санузел 1</span>
-                                            <span class="right">120,5</span>
-                                        </li>
-                                    </ul>
-                                    <a href="#" class="bt bt-second">
-                                        ПОДРОБНЕЕ
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                    <article class="all-cottage-item">
-                        <div class="all-cottage-item-hover">
-                            <div class="all-cottage-img">
-                                <a href="#" title="Коттедж тип 2">
-                                    <img src="img/content/cottages.png" alt="">
-                                </a>
-                            </div>
-                            <div class="all-cottage-content">
-                                <div class="all-cottage-content-top">
-                                    <h3 class="all-cottage-title">
-                                        <a href="#" title="Коттедж тип 2">Коттедж тип 2</a>
-                                        <span>1 этаж, 4 команты</span>
-                                    </h3>
-                                    <div class="size">
-                                        150 м<sup>2</sup>
-                                    </div>
-                                </div>
-                                <div class="price">
-                                    1 578 000<sup>ГРН</sup>
-                                </div>
-                                <div class="count">
-                                    7 свободно | 3 бронь
-                                </div>
-                                <div class="extra">
-                                    <h3 class="cottage-sub-title">
-                                        Площадь (м2)
-                                    </h3>
-                                    <ul class="cottage-info">
-                                        <li>
-                                            <span class="left">Общая</span>
-                                            <span class="right">120,5</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Гостинная</span>
-                                            <span class="right">48,5</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Холл</span>
-                                            <span class="right">14,5</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Спалня</span>
-                                            <span class="right">17,4</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Спалня 1</span>
-                                            <span class="right">21,3</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Санузел</span>
-                                            <span class="right">8,2</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Санузел 1</span>
-                                            <span class="right">120,5</span>
-                                        </li>
-                                    </ul>
-                                    <a href="#" class="bt bt-second">
-                                        ПОДРОБНЕЕ
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                    <article class="all-cottage-item">
-                        <div class="all-cottage-item-hover">
-                            <div class="all-cottage-img">
-                                <a href="#" title="Коттедж тип 2">
-                                    <img src="img/content/cottages.png" alt="">
-                                </a>
-                            </div>
-                            <div class="all-cottage-content">
-                                <div class="all-cottage-content-top">
-                                    <h3 class="all-cottage-title">
-                                        <a href="#" title="Коттедж тип 2">Коттедж тип 2</a>
-                                        <span>1 этаж, 4 команты</span>
-                                    </h3>
-                                    <div class="size">
-                                        150 м<sup>2</sup>
-                                    </div>
-                                </div>
-                                <div class="price">
-                                    1 578 000<sup>ГРН</sup>
-                                </div>
-                                <div class="count">
-                                    7 свободно | 3 бронь
-                                </div>
-                                <div class="extra">
-                                    <h3 class="cottage-sub-title">
-                                        Площадь (м2)
-                                    </h3>
-                                    <ul class="cottage-info">
-                                        <li>
-                                            <span class="left">Общая</span>
-                                            <span class="right">120,5</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Гостинная</span>
-                                            <span class="right">48,5</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Холл</span>
-                                            <span class="right">14,5</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Спалня</span>
-                                            <span class="right">17,4</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Спалня 1</span>
-                                            <span class="right">21,3</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Санузел</span>
-                                            <span class="right">8,2</span>
-                                        </li>
-                                        <li>
-                                            <span class="left">Санузел 1</span>
-                                            <span class="right">120,5</span>
-                                        </li>
-                                    </ul>
-                                    <a href="#" class="bt bt-second">
-                                        ПОДРОБНЕЕ
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-xs-12">
-                    <a href="#" class="bt bt-prime more">
-                        ЕЩЁ ПРОЕКТЫ
-                    </a>
-                </div>
+<div class="allCotages">
+        <div class="page-title">
+            <h1>Проекты коттеджей</h1>
+            <div class="filters">
+                <ul>
+                    <li>
+                        <a href="#" title="">
+                            <i class="ico ico-flat">
+
+                            </i>
+                            <span>плоская кровля</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            <i class="ico ico-floor">
+
+                            </i>
+                            <span>1 этаж</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#" title="">
+                            <i class="ico ico-floor2">
+
+                            </i>
+                            <span>2 этажа</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            <i class="ico ico-prize1">
+
+                            </i>
+                            <span>низкая цена</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            <i class="ico ico-prize2">
+
+                            </i>
+                            <span>высокая цена</span>
+                        </a>
+                    </li>
+                </ul>
+                <a href="" class="bt bt-second">
+                    <span>Фильтр</span>
+                    <i>
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8"><path fill="#fff" d="M4 8V6h4v2zM2 5V3h6v2zM0 2V0h8v2z"/></svg>
+                    </i>
+                </a>
             </div>
         </div>
-    </div>
+        <div class="cottage-slider">
+            <div class="cottage-item">
+                <article class="all-cottage-item">
+                        <div class="all-cottage-item-hover">
+                            <div class="all-cottage-img">
+                                <a href="#" title="Коттедж тип 2">
+                                    <img src="img/content/cottages.png" alt="">
+                                </a>
+                            </div>
+                            <div class="all-cottage-content">
+                                <div class="all-cottage-content-top">
+                                    <h3 class="all-cottage-title">
+                                        <a href="#" title="Коттедж тип 2">Коттедж тип 2</a>
+                                        <span>1 этаж, 4 команты</span>
+                                    </h3>
+                                    <div class="size">
+                                        150 м<sup>2</sup>
+                                    </div>
+                                </div>
+                                <div class="price">
+                                    1 578 000<sup>ГРН</sup>
+                                </div>
+                                <div class="count">
+                                    7 свободно | 3 бронь
+                                </div>
+                                <div class="extra">
+                                    <h3 class="cottage-sub-title">
+                                        Площадь (м2)
+                                    </h3>
+                                    <ul class="cottage-info">
+                                        <li>
+                                            <span class="left">Общая</span>
+                                            <span class="right">120,5</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Гостинная</span>
+                                            <span class="right">48,5</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Холл</span>
+                                            <span class="right">14,5</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Спалня</span>
+                                            <span class="right">17,4</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Спалня 1</span>
+                                            <span class="right">21,3</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Санузел</span>
+                                            <span class="right">8,2</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Санузел 1</span>
+                                            <span class="right">120,5</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                                    <a href="#" class="bt bt-second">
+                                        БОЛЬШЕ ИНФОРМАЦИИ
+                                    </a>
+                        </div>
+                    </article>
+            </div>
+            <div class="cottage-item">
+                <article class="all-cottage-item">
+                        <div class="all-cottage-item-hover">
+                            <div class="all-cottage-img">
+                                <a href="#" title="Коттедж тип 2">
+                                    <img src="img/content/cottages.png" alt="">
+                                </a>
+                            </div>
+                            <div class="all-cottage-content">
+                                <div class="all-cottage-content-top">
+                                    <h3 class="all-cottage-title">
+                                        <a href="#" title="Коттедж тип 2">Коттедж тип 2</a>
+                                        <span>1 этаж, 4 команты</span>
+                                    </h3>
+                                    <div class="size">
+                                        150 м<sup>2</sup>
+                                    </div>
+                                </div>
+                                <div class="price">
+                                    1 578 000<sup>ГРН</sup>
+                                </div>
+                                <div class="count">
+                                    7 свободно | 3 бронь
+                                </div>
+                                <div class="extra">
+                                    <h3 class="cottage-sub-title">
+                                        Площадь (м2)
+                                    </h3>
+                                    <ul class="cottage-info">
+                                        <li>
+                                            <span class="left">Общая</span>
+                                            <span class="right">120,5</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Гостинная</span>
+                                            <span class="right">48,5</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Холл</span>
+                                            <span class="right">14,5</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Спалня</span>
+                                            <span class="right">17,4</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Спалня 1</span>
+                                            <span class="right">21,3</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Санузел</span>
+                                            <span class="right">8,2</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Санузел 1</span>
+                                            <span class="right">120,5</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                                    <a href="#" class="bt bt-second">
+                                        БОЛЬШЕ ИНФОРМАЦИИ
+                                    </a>
+                        </div>
+                    </article>
+            </div>
+            <div class="cottage-item">
+                <article class="all-cottage-item">
+                        <div class="all-cottage-item-hover">
+                            <div class="all-cottage-img">
+                                <a href="#" title="Коттедж тип 2">
+                                    <img src="img/content/cottages.png" alt="">
+                                </a>
+                            </div>
+                            <div class="all-cottage-content">
+                                <div class="all-cottage-content-top">
+                                    <h3 class="all-cottage-title">
+                                        <a href="#" title="Коттедж тип 2">Коттедж тип 2</a>
+                                        <span>1 этаж, 4 команты</span>
+                                    </h3>
+                                    <div class="size">
+                                        150 м<sup>2</sup>
+                                    </div>
+                                </div>
+                                <div class="price">
+                                    1 578 000<sup>ГРН</sup>
+                                </div>
+                                <div class="count">
+                                    7 свободно | 3 бронь
+                                </div>
+                                <div class="extra">
+                                    <h3 class="cottage-sub-title">
+                                        Площадь (м2)
+                                    </h3>
+                                    <ul class="cottage-info">
+                                        <li>
+                                            <span class="left">Общая</span>
+                                            <span class="right">120,5</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Гостинная</span>
+                                            <span class="right">48,5</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Холл</span>
+                                            <span class="right">14,5</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Спалня</span>
+                                            <span class="right">17,4</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Спалня 1</span>
+                                            <span class="right">21,3</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Санузел</span>
+                                            <span class="right">8,2</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Санузел 1</span>
+                                            <span class="right">120,5</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                                    <a href="#" class="bt bt-second">
+                                        БОЛЬШЕ ИНФОРМАЦИИ
+                                    </a>
+                        </div>
+                    </article>
+            </div>
+            <div class="cottage-item">
+                <article class="all-cottage-item">
+                        <div class="all-cottage-item-hover">
+                            <div class="all-cottage-img">
+                                <a href="#" title="Коттедж тип 2">
+                                    <img src="img/content/cottages.png" alt="">
+                                </a>
+                            </div>
+                            <div class="all-cottage-content">
+                                <div class="all-cottage-content-top">
+                                    <h3 class="all-cottage-title">
+                                        <a href="#" title="Коттедж тип 2">Коттедж тип 2</a>
+                                        <span>1 этаж, 4 команты</span>
+                                    </h3>
+                                    <div class="size">
+                                        150 м<sup>2</sup>
+                                    </div>
+                                </div>
+                                <div class="price">
+                                    1 578 000<sup>ГРН</sup>
+                                </div>
+                                <div class="count">
+                                    7 свободно | 3 бронь
+                                </div>
+                                <div class="extra">
+                                    <h3 class="cottage-sub-title">
+                                        Площадь (м2)
+                                    </h3>
+                                    <ul class="cottage-info">
+                                        <li>
+                                            <span class="left">Общая</span>
+                                            <span class="right">120,5</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Гостинная</span>
+                                            <span class="right">48,5</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Холл</span>
+                                            <span class="right">14,5</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Спалня</span>
+                                            <span class="right">17,4</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Спалня 1</span>
+                                            <span class="right">21,3</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Санузел</span>
+                                            <span class="right">8,2</span>
+                                        </li>
+                                        <li>
+                                            <span class="left">Санузел 1</span>
+                                            <span class="right">120,5</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                                    <a href="#" class="bt bt-second">
+                                        БОЛЬШЕ ИНФОРМАЦИИ
+                                    </a>
+                        </div>
+                    </article>
+            </div>
+        </div>
+</div>
 
 
     <section class="main-contacts-bg main-contacts-bg--other-page">
