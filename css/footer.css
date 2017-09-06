@@ -41,13 +41,39 @@ footer .site-info {
 }
 footer .site-info li {
     display: inline-flex;
+    flex-direction: column;
     text-align: center;
     font-size: 13px;
     margin-right: 10px;
 }
+footer .site-info li .site-info-inner {
+    display: flex;
+    flex-direction: row
+}
+footer .site-info li .site-info-inner span {
+    line-height: 16px;
+    margin-right: 5px
+}
 footer .site-info li .sprite {
     margin-right: 5px;
+    position: relative;
+    bottom: -3px
 }
+footer .site-info li a {
+    color: #8c8c8c;
+    font-weight: bold;
+    line-height: 16px;
+}
+footer .site-info li a:hover {
+    color: #78aa46
+}
+footer .site-info-inner--place {
+    max-width: 185px
+}
+footer .site-info-inner--place .sprite-location {
+    min-width: 10px
+}
+
 
 .breadcrumbs {
     display: flex;
