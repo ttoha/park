@@ -17,9 +17,10 @@
 	<script type="text/javascript" src="js/lightbox.js"></script>
 	<script type="text/javascript" src="js/jquery.flip.min.js"></script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5b7Lp4T9q6UXrmvYXSY-aw8hGf7mcPQ&language=uk"></script>
+<!--	<script type="text/javascript" src="js/map.resiz44er.js"></script>-->
 	<script type="text/javascript" src="js/function.js"></script>
 </head>
-<body onload="initMap()">
+<body>
     <div class="mobile-menu" id="sidr">
         <ul>
             <li><a href="#" title="О комплексе">О комплексе</a></li>
@@ -31,18 +32,82 @@
             <li><a href="#" title="КОНТАКТЫ">КОНТАКТЫ</a></li>
         </ul>
     </div>
+    <header>
 
-    <div class="contacts">
+        <a id="simple-menu" class="mobile-menu-btn" href="#sidr">
+            <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" fill="#6b7d87"/>
+            </svg>
+        </a>
+        <div class="header-inner">
+        <div class="logo">
+            <a href="/" title="Михайловский Сад">
+                <img src="img/logo.png" alt="Михайловский Сад">
+            </a>
+        </div>
+        <div class="main-menu hidden-xs hidden-sm">
+            <ul>
+                <li><a href="#" title="О комплексе">О комплексе</a></li>
+                <li><a href="#" title="ГЕНПЛАН">ГЕНПЛАН</a></li>
+                <li><a href="#" title="КОТТЕДЖИ">КОТТЕДЖИ</a></li>
+                <li><a href="#" title="ИНФРАСТРУКТУРА">ИНФРАСТРУКТУРА</a></li>
+                <li><a href="#" title="УСЛУГИ">УСЛУГИ</a></li>
+                <li><a href="#" title="ГАЛЕРЕЯ">ГАЛЕРЕЯ</a></li>
+                <li><a href="#" title="КОНТАКТЫ">КОНТАКТЫ</a></li>
+            </ul>
+        </div>
+        <div class="header-right">
+        <div class="header-phone hidden-xs ">
+            <a href="#phone" data-toggle="collapse">
+                <i class="sprite sprite-arrow-bottom"></i>
+                +38 (044) 123-45-67
+            </a>
 
-        <img id="imgmap" src="img/geoplan.jpg" usemap="#image-map">
+            <div id="phone" class="collapse">
+                +38 (044) 123-45-67
+            </div>
+        </div>
+        <div class="callback">
+            <a href="#" class="bt bt-prime" data-toggle="modal" data-target="#callback" title="Перезвоните мне">
+                <i class="sprite sprite-phone2 hidden-xs"></i>
+                <span>Перезвоните мне</span>
+            </a>
+        </div>
+        </div>
+        </div>
+    </header>
 
-
-
-<map name="Map" id="Map">
-
-      <map name="image-map">
-            <area class="area" data-number="1" alt="Котедж 1" title="Котедж 1" data-toggle="modal" data-target="#cottage1" shape="poly" coords="825,607,768,677,773,696,835,717,892,631">
-        </map>
+    <div class="geoplan">
+        <div class="select-cottage visible-xs">
+            <select select-cottage>
+                <option value="cottage0">Выбирете котедж</option>
+                <option value="cottage1">Котедж 1</option>
+                <option value="cottage2">Котедж 2</option>
+                <option value="cottage3">Котедж 3</option>
+                <option value="cottage4">Котедж 4</option>
+            </select>
+        </div>
+        <img  src="img/geoplan.jpg" alt="">
+        <div class="gen-item hidden-xs" style="left: 49%; top: 64%;">
+            <span data-cottage-number="1"  data-toggle="modal" data-target="#cottage1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="38" viewBox="0 0 28 38"><path d="M14 0c7.73 0 14 6.24 14 13.93C28 21.63 14 38 14 38S0 21.63 0 13.93C0 6.23 6.26 0 14 0z"/></svg>
+            </span>
+        </div>
+        <div class="gen-item hidden-xs" style="left: 52%; top: 66%;">
+            <span data-cottage-number="2"  data-toggle="modal" data-target="#cottage1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="38" viewBox="0 0 28 38"><path d="M14 0c7.73 0 14 6.24 14 13.93C28 21.63 14 38 14 38S0 21.63 0 13.93C0 6.23 6.26 0 14 0z"/></svg>
+            </span>
+        </div>
+        <div class="gen-item hidden-xs" style="left: 55%; top: 68%;">
+            <span data-cottage-number="3"  data-toggle="modal" data-target="#cottage1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="38" viewBox="0 0 28 38"><path d="M14 0c7.73 0 14 6.24 14 13.93C28 21.63 14 38 14 38S0 21.63 0 13.93C0 6.23 6.26 0 14 0z"/></svg>
+            </span>
+        </div>
+        <div class="gen-item hidden-xs" style="left: 58%; top: 70%;">
+            <span data-cottage-number="4"  data-toggle="modal" data-target="#cottage1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="38" viewBox="0 0 28 38"><path d="M14 0c7.73 0 14 6.24 14 13.93C28 21.63 14 38 14 38S0 21.63 0 13.93C0 6.23 6.26 0 14 0z"/></svg>
+            </span>
+        </div>
     </div>
 
 
@@ -149,8 +214,365 @@
 
 			</div><!-- modal-content -->
 		</div><!-- modal-dialog -->
-	</div><!-- modal -->
+	</div>
+    	<div class="modal right fade" id="cottage2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
 
+				<div class="modal-header">
+					<div class="modal-title-wrap">
+				    	<h4 class="modal-title" id="myModalLabel">1 этажный коттедж
+с 4 комнатами</h4>
+					</div>
 
+                    <div class="modal-extra"></div>
+                    <div class="modal-close">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+				</div>
+
+				<div class="modal-body">
+
+                    <div class="modal-body-row">
+                        <div class="modal-body-img">
+                            <img src="img/content/img-plan.jpg" alt="" >
+                        </div>
+                        <div class="modal-body-cont">
+                            <div class="modal-body-title">
+                                <div class="modal-body-title-left">
+                                    <p>№85</p>
+                                    <p>Lorem Ipsum</p>
+                                </div>
+                                <div class="modal-body-title-right">
+                                    <div class="price">1 578 000 <sup>грн</sup></div>
+                                </div>
+                            </div>
+                            <h3 class="cottage-sub-title">
+                                Площадь (м2)
+                            </h3>
+                            <ul class="cottage-info">
+                                <li>
+                                    <span class="left">Общая</span>
+                                    <span class="right">120,5</span>
+                                </li>
+                                <li>
+                                    <span class="left">Гостинная</span>
+                                    <span class="right">48,5</span>
+                                </li>
+                                <li>
+                                    <span class="left">Холл</span>
+                                    <span class="right">14,5</span>
+                                </li>
+                                <li>
+                                    <span class="left">Спалня</span>
+                                    <span class="right">17,4</span>
+                                </li>
+                                <li>
+                                    <span class="left">Спалня 1</span>
+                                    <span class="right">21,3</span>
+                                </li>
+                                <li>
+                                    <span class="left">Санузел</span>
+                                    <span class="right">8,2</span>
+                                </li>
+                                <li>
+                                    <span class="left">Санузел 1</span>
+                                    <span class="right">120,5</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="modal-body-row">
+                        <div class="modal-body-img">
+                            <img src="img/content/house-plan-blueprint.png" alt="" >
+                        </div>
+                        <div class="modal-body-cont contacts-right">
+
+                            <form action="#">
+                                <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <input value="" placeholder="Имя" type="text">
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6">
+                                        <input value="" placeholder="Телефон" type="text">
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="textarea">
+                                            <textarea></textarea>
+                                            <span>Сообщение</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <input class="bt bt-prime" value="Оставить заявку" type="submit">
+                                    </div>
+                                </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+				</div>
+
+			</div><!-- modal-content -->
+		</div><!-- modal-dialog -->
+	</div>
+    	<div class="modal right fade" id="cottage3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<div class="modal-title-wrap">
+				    	<h4 class="modal-title" id="myModalLabel">1 этажный коттедж
+с 4 комнатами</h4>
+					</div>
+
+                    <div class="modal-extra"></div>
+                    <div class="modal-close">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+				</div>
+
+				<div class="modal-body">
+
+                    <div class="modal-body-row">
+                        <div class="modal-body-img">
+                            <img src="img/content/img-plan.jpg" alt="" >
+                        </div>
+                        <div class="modal-body-cont">
+                            <div class="modal-body-title">
+                                <div class="modal-body-title-left">
+                                    <p>№85</p>
+                                    <p>Lorem Ipsum</p>
+                                </div>
+                                <div class="modal-body-title-right">
+                                    <div class="price">1 578 000 <sup>грн</sup></div>
+                                </div>
+                            </div>
+                            <h3 class="cottage-sub-title">
+                                Площадь (м2)
+                            </h3>
+                            <ul class="cottage-info">
+                                <li>
+                                    <span class="left">Общая</span>
+                                    <span class="right">120,5</span>
+                                </li>
+                                <li>
+                                    <span class="left">Гостинная</span>
+                                    <span class="right">48,5</span>
+                                </li>
+                                <li>
+                                    <span class="left">Холл</span>
+                                    <span class="right">14,5</span>
+                                </li>
+                                <li>
+                                    <span class="left">Спалня</span>
+                                    <span class="right">17,4</span>
+                                </li>
+                                <li>
+                                    <span class="left">Спалня 1</span>
+                                    <span class="right">21,3</span>
+                                </li>
+                                <li>
+                                    <span class="left">Санузел</span>
+                                    <span class="right">8,2</span>
+                                </li>
+                                <li>
+                                    <span class="left">Санузел 1</span>
+                                    <span class="right">120,5</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="modal-body-row">
+                        <div class="modal-body-img">
+                            <img src="img/content/house-plan-blueprint.png" alt="" >
+                        </div>
+                        <div class="modal-body-cont contacts-right">
+
+                            <form action="#">
+                                <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <input value="" placeholder="Имя" type="text">
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6">
+                                        <input value="" placeholder="Телефон" type="text">
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="textarea">
+                                            <textarea></textarea>
+                                            <span>Сообщение</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <input class="bt bt-prime" value="Оставить заявку" type="submit">
+                                    </div>
+                                </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+				</div>
+
+			</div><!-- modal-content -->
+		</div><!-- modal-dialog -->
+	</div>
+    	<div class="modal right fade" id="cottage4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<div class="modal-title-wrap">
+				    	<h4 class="modal-title" id="myModalLabel">1 этажный коттедж
+с 4 комнатами</h4>
+					</div>
+
+                    <div class="modal-extra"></div>
+                    <div class="modal-close">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+				</div>
+
+				<div class="modal-body">
+
+                    <div class="modal-body-row">
+                        <div class="modal-body-img">
+                            <img src="img/content/img-plan.jpg" alt="" >
+                        </div>
+                        <div class="modal-body-cont">
+                            <div class="modal-body-title">
+                                <div class="modal-body-title-left">
+                                    <p>№85</p>
+                                    <p>Lorem Ipsum</p>
+                                </div>
+                                <div class="modal-body-title-right">
+                                    <div class="price">1 578 000 <sup>грн</sup></div>
+                                </div>
+                            </div>
+                            <h3 class="cottage-sub-title">
+                                Площадь (м2)
+                            </h3>
+                            <ul class="cottage-info">
+                                <li>
+                                    <span class="left">Общая</span>
+                                    <span class="right">120,5</span>
+                                </li>
+                                <li>
+                                    <span class="left">Гостинная</span>
+                                    <span class="right">48,5</span>
+                                </li>
+                                <li>
+                                    <span class="left">Холл</span>
+                                    <span class="right">14,5</span>
+                                </li>
+                                <li>
+                                    <span class="left">Спалня</span>
+                                    <span class="right">17,4</span>
+                                </li>
+                                <li>
+                                    <span class="left">Спалня 1</span>
+                                    <span class="right">21,3</span>
+                                </li>
+                                <li>
+                                    <span class="left">Санузел</span>
+                                    <span class="right">8,2</span>
+                                </li>
+                                <li>
+                                    <span class="left">Санузел 1</span>
+                                    <span class="right">120,5</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="modal-body-row">
+                        <div class="modal-body-img">
+                            <img src="img/content/house-plan-blueprint.png" alt="" >
+                        </div>
+                        <div class="modal-body-cont contacts-right">
+
+                            <form action="#">
+                                <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <input value="" placeholder="Имя" type="text">
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6">
+                                        <input value="" placeholder="Телефон" type="text">
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="textarea">
+                                            <textarea></textarea>
+                                            <span>Сообщение</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <input class="bt bt-prime" value="Оставить заявку" type="submit">
+                                    </div>
+                                </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+				</div>
+
+			</div><!-- modal-content -->
+		</div><!-- modal-dialog -->
+	</div>
+
+    <footer>
+        <div class="footer-logo">
+            <a href="/" title="">
+                <img src="img/logo-footer.png" alt="">
+            </a>
+        </div>
+        <ul class="footer-menu">
+            <li><a href="#" title="ТАУНХАУСЫ">ТАУНХАУСЫ</a></li>
+            <li><a href="#" title="ДУПЛЕКСЫ">ДУПЛЕКСЫ</a></li>
+            <li><a href="#" title="УЧАСТОК">УЧАСТОК</a></li>
+            <li><a href="#" title="ДОКУМЕНТЫ">ДОКУМЕНТЫ</a></li>
+        </ul>
+        <div class="footer-bt">
+            <a href="#" class="bt bt-second">
+                ЗАПИСАТЬСЯ НА ПРОСМОТР
+            </a>
+        </div>
+        <ul class="site-info">
+            <li>
+               <div class="site-info-inner site-info-inner--place">
+                <i class="sprite sprite-location"></i>
+                <span>Киево-Святошинский р-н, с. Михайловка-Рубежовка</span>
+               </div>
+            </li>
+            <li>
+               <div class="site-info-inner">
+                <i class="sprite sprite-phone"></i>
+                <span>+38 (044) 123-45-67</span>
+                </div>
+               <div class="site-info-inner">
+                <i class="sprite sprite-mail"></i>
+                <span>email@email.com</span>
+               </div>
+            </li>
+            <li>
+               <div class="site-info-inner">
+                    <span>Разработка сайта —</span>
+                    <a href="https://prodex.ua/" target="_blank">Prodex</a>
+                </div>
+               <div class="site-info-inner">
+                    <span>Раскрутка сайта —</span>
+                    <a href="https://aweb.ua/" target="_blank">Aweb.ua</a>
+                </div>
+            </li>
+        </ul>
+    </footer>
 </body>
 </html>

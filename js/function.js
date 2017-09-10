@@ -2,10 +2,22 @@ $( document ).ready(function() {
 
     $('[data-number]').on('mouseover', function(){
         var number = $(this).attr('data-number');
-        $('#imgmap').attr('src', 'img/geoplan'+ number +'.jpg')
     })
     $('[data-number]').on('mouseout', function(){
-        $('#imgmap').attr('src', 'img/geoplan.jpg')
+
+    })
+
+//$(document).ready(function() {
+//    $('map').imageMapResize();
+//});
+
+
+
+    $('[select-cottage]').on('change', function(){
+        var cottage = $(this).val();
+        $('#'+cottage).modal('show');
+        $('.modal-backdrop').removeClass("modal-backdrop");
+        $('.modal-open').removeClass("modal-open");
     })
 
 

@@ -362,4 +362,45 @@
     #map {
         display: none
     }
+    .modal--callback:before {
+        display: none
+    }
+    .modal--callback .modal-content {
+        padding:10px;
+    }
+    .form h2 {
+        font-size: 20px;
+        margin-bottom: 20px
+    }
+    .modal--callback .close {
+        right:9px; top:-2px
+    }
+    .form .bt-prime--center {
+        padding:0 35px;
+        height:40px
+    }
+    .modal.right.fade.in .modal-dialog {
+        width: 100%;
+        top:0; bottom:0; right:0;
+    }
+
+    .modal.right.fade.in .modal-header {
+        padding: 10px 15px
+    }
+    .modal.right.fade.in .modal-body-row {
+        display: block
+
+    }
+    .modal.right.fade.in .modal-body-img {
+        min-width: 100%
+    }
+    .modal.right.fade.in .modal-body-img img {
+        width: 100%;
+    }
+    .modal.right.fade.in .modal-body-cont {
+        margin:15px; padding: 0;
+    }
+    .modal.right.fade.in .modal-body-cont.contacts-right {
+        margin:0
+    }
 }

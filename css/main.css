@@ -1163,12 +1163,72 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f5f5f5', e
     overflow: hidden
 }
 
+.geoplan {
+    display: table;
+    width: 100%;
+    position: relative
+}
+
+.geoplan img {
+    float: left;
+    width: 100%;
+}
+.geoplan .gen-item {
+    position: absolute;
+    width:0; height:0;
+}
+
+.geoplan .gen-item span {
+    position: absolute;
+    display: table;
+    left:0; bottom:0;
+    width:28px;
+    transform: translate(-50%, 0);
+    transition: width .15s ease-out 0.1s;
+}
+.geoplan .gen-item span:before {
+    content: attr(data-cottage-number);
+    position:absolute;
+    top:7px; left:0; right:0;
+    color: #414141;
+    text-align: center;
+    font-size: 11px;
+    transition: top .15s ease-out 0.1s;
+}
+.geoplan .gen-item svg {
+    fill:#fff;
+    width: 100%; height:100%;
+}
+.geoplan .gen-item span:hover {
+    cursor: pointer;
+    width: 34px;
+    transition: width .15s ease-out 0.1s;
+}
+.geoplan .gen-item span:hover svg {
+    fill: #ff864d;
+}
+.geoplan .gen-item:hover span:before {
+    color:#fff;
+    top:10px;
+    font-size:14px;
+    transition: top .15s ease-out 0.1s;
+}
+
+.select-cottage {
+    padding:15px;
+    clear: both
+}
+.select-cottage select {
+    width: 100%
+}
+
+
 
 	.modal.left .modal-dialog,
 	.modal.right .modal-dialog {
 		position: fixed;
 		margin: auto;
-		width: 780px;
+		width: 768px;
         top: 30px;
         bottom: 30px;
 		-webkit-transform: translate3d(0%, 0, 0);
@@ -1192,7 +1252,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f5f5f5', e
 	}
 
 	.modal.right.fade.in .modal-dialog {
-		right: 60px;
+		right: 3%;
 	}
 
 
